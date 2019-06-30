@@ -9,7 +9,7 @@ function ListItem(props) {
     const {name, isDirectory} = props;
     const icon = (isDirectory) ? folderIcon : fileIcon;
     return <li className="list-item" onClick={() => props.onSelect(name)}>
-        <img className="icon" src={icon}/>
+        <img className="icon" src={icon} alt=""/>
         <span>{name}</span>
         <span className="caret">{isDirectory ? <FontAwesomeIcon icon={faCaretRight}/> : null}</span>
     </li>

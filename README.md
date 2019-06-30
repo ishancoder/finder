@@ -1,68 +1,53 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+# Description
+The Objective of this project was to create a clone of MAC's Finder application. It'll have all the basic, level based file navigation interactions.
 
-In the project directory, you can run:
+## Assumptions
+1. Since this is only a WebApp we're not getting the data from the file system. The objective is just to clone the functionality and visuals only. 
+2. We're using a simple JSON file to store the data.
+3. Any OBJECT in the JSON is considered as directory. Where **KEY** is going to be the **NAME** of the directory and the **VALUE** (the object itself) is the **content of the directory**.
+4. Similarly, Any string is considered as a file. Where the **KEY** is going to be the **NAME** of the file and the **VALUE** is going to be the **CONTENTS**. 
 
-### `npm start`
+So if the JSON is something like this.
+``` 
+{
+    "file1.txt" : "Some random text",
+    "folder1" : {
+        "file1.1.txt" : "Some random text",
+        "folder1.1": {
+            "file1.1.1.txt" : "Some random text"
+        }
+    },
+    "folder2" : {
+        "file2.1.txt" : "Some random text"
+    }
+}
+```
 
-Runs the app in the development mode.<br>
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+It's going to represent the below directory structure
 
-The page will reload if you make edits.<br>
-You will also see any lint errors in the console.
+```
+/(root)
+|_ file1.txt
+|_ folder1
+   |_ file1.1.txt
+   |_ folder1.1
+      |_ file1.1.1.txt
+|_ folder2
+   |_ file2.1.txt
+```
 
-### `npm test`
+## How to get this thing working ?
+1. Use `git clone` or download the zip.
+2. If you've downloaded the zip extract it.
+3. `cd` into the repository.
+4. Run `npm install` or `yarn` (if you're using it)
+5. Run `npm start` or `yarn start` (Again if you're using it)
+6. A browser window will automatically open & in case if it didn't open your favourite browser and go to : [http://localhost:3000](http://localhost:3000).
 
-Launches the test runner in the interactive watch mode.<br>
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.<br>
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.<br>
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+## What did i use to build it ?
+1. `React` as the view layer.
+2. `SASS` Syntactically Awesome.
+3. `FontAwesome` for some icons.
+4. Since the project itself was very small I didn't feel the need of `REDUX` here.
