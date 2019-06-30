@@ -1,0 +1,23 @@
+{
+    "file1.txt": "alskdaf lsajdf laskfj lsakjfd lsajdfl sjdflks ajdflkjsadlkfj lsdafjlkfjsladkfjdslkaf saldkfjlskadf",
+    "file2.txt": "s;dflkaj kjfsad lkjfdas lkjfads jklfsadl kljfasd mjkldfas ;lkjsdfa lkjsdaf",
+    "file3.txt": "lskajfskl lsjdaflksad ljsadflksja jsaldfjsa lkjsadflksajd lkjsadlfkjdsaf",
+    "folder1": {
+        "file1.1.txt": "Blah",
+        "file1.2.txt": "",
+        "file1.3.txt": "lkfjsda ljkfads jklafsd lkjsfda lkjsdfa lkjsfda",
+        "folder1.1": {
+            "file1.1.1.txt": "Blah",
+            "file1.1.2.txt": "",
+            "folder1.1.1": {
+
+            }
+        }
+    },
+    "folder2": {
+        "file2.1.txt": "lkjdsfa sfalkjd lkjsadf ljkfsa lkjsadlf lkjsdfa lkjsadf"
+    },
+    "folder3": {
+
+    }
+}
