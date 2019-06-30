@@ -3,10 +3,13 @@ import "./ListView.sass";
 import ListItem from "../ListItem/ListItem";
 
 function ListView(props) {
+    const keys = Object.keys(props.contains);
+    if(keys.length === 0)
+        return <div className="list-view">The directory is empty!</div>;
+
     return <ul className="list-view">
         {
-            Object
-            .keys(props.contains)
+            keys
             .map(key => {
                 return <ListItem
                     key={key} 

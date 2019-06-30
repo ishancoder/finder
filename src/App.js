@@ -41,7 +41,7 @@ class App extends Component {
       </Fragment>
     } else if(typeof value === 'string') {
       // Render the FileView if the selected element is file.
-      return <FileView key={key} content={value} />
+      return <FileView key={key} name={key} content={value} />
     }
   }
 
